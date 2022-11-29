@@ -12,6 +12,8 @@
         <kafka.version>3.3.1</kafka.version>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
+        <slf4j.version>2.0.3</slf4j.version>
+        <jackson.version>2.13.4.2</jackson.version>
     </properties>
 
     <dependencies>
@@ -24,6 +26,21 @@
             <artifactId>kafka-streams</artifactId>
             <groupId>org.apache.kafka</groupId>
             <version>${kafka.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>slf4j-simple</artifactId>
+            <groupId>org.slf4j</groupId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
 

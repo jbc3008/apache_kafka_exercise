@@ -1,0 +1,13 @@
+{
+    "name": "mongo-tutorial-sink",
+    "config": {
+        "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+        "topics": "rekeyed-users",
+        "connection.uri": "mongodb://admin:admin@mongo/?authSource=admin",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter.schemas.enable": false,
+        "database": "kafka_exercise",
+        "collection": "users"
+    }
+}
